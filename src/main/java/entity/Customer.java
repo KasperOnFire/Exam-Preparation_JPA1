@@ -17,8 +17,15 @@ public class Customer implements Serializable {
 
     private String name;
     private String email;
-    
-    
+
+    public Customer() {
+    }
+
+    public Customer(String n, String e) {
+        name = n;
+        email = e;
+    }
+
     @OneToMany(mappedBy = "customer")
     private List<Order> orders;
 
